@@ -1,0 +1,55 @@
+/*
+	Demo map to test exterior.
+
+	grass_256x256.png  : https://opengameart.org/content/tiny-texture-pack-grass-11-256x256png
+	cobble_ceiling.png : https://opengameart.org/content/various-retro-textures-cobbleceilingpng
+*/
+
+
+title="Demo map interior";
+
+playerStartPos=[3.5, 4.0]; // x, y
+
+size =[7, 7]; // number of cells on x, y
+
+// Cell format is: 
+// Top, Bottom, Left, Right, Ceiling, Floor
+data=
+[
+	2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,
+	2, 2, 2, 2, 0, 0,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   2, 2, 2, 2, 0, 1,
+	2, 2, 2, 2, 0, 0,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   2, 2, 2, 2, 0, 1,
+	2, 2, 2, 2, 0, 0,   0, 0, 0, 0, 0, 1,   2, 2, 2, 2, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   2, 2, 2, 2, 0, 1,
+	2, 2, 2, 2, 0, 0,   0, 2, 2, 2, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   2, 0, 2, 0, 0, 1,   0, 0, 0, 0, 0, 1,   2, 2, 2, 2, 0, 1,
+	2, 2, 2, 2, 0, 0,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   0, 0, 0, 0, 0, 1,   2, 2, 2, 2, 0, 1,
+	2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0,   2, 2, 2, 2, 0, 0
+];
+
+cellsInfoColor=
+[ /* CellInfoID   R    G    B */
+	 
+];
+cellsInfoTexture=
+[ /* CellInfoID   TextureID */
+	 1,           1,
+	 2,           2
+];
+
+textures=
+[ /* TextureID   FilePath */
+	 1,          "demoMapExterior_textures/grass_256x256.png",
+	 2,          "demoMapExterior_textures/cobble_ceiling.png"
+];
+
+playerHasLight             = 1;
+playerLightDiffuseStrength = 20.0;
+playerLightDiffusePower    = 3.0;
+playerLightDiffuseColor    = [255, 255, 255];
+
+hasAmbientLight      = 1;
+ambientLightStrength = 0.91;
+ambientLightColor    = [255, 255, 255];
+
+environmentIsTexture = 0;
+environmentColor     = [133, 220, 255];
+environmentTextureId = 0;

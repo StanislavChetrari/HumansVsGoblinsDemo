@@ -1,0 +1,78 @@
+/*
+	Demo map to test interior of a mouse or dungeon.
+	
+	floorTilesBlue_128x128.png : https://opengameart.org/content/tiny-texture-pack-tile-9-256x256png
+	floorTiles_128x128.png     : https://opengameart.org/content/tiny-texture-pack-tile-10-256x256png
+	brick_128x128.png          : https://opengameart.org/content/tiny-texture-pack-brick-5-256x256png
+	brick2_128x128.png         : https://opengameart.org/content/tiny-texture-pack-brick-2-256x256png
+	cobble_wall.png            : https://opengameart.org/content/various-retro-textures-cobblewallpng
+	cobble_ceiling.png         : https://opengameart.org/content/various-retro-textures-cobbleceilingpng
+	rck_2.png                  : https://opengameart.org/content/seam-less-rock-textures-rck2png
+	tile14_128x128.png         : https://opengameart.org/content/tiny-texture-pack-tile-14-128x128png
+	tile21_128x128.png         : https://opengameart.org/content/tiny-texture-pack-tile-21-128x128png
+	bars.png                   : https://opengameart.org/content/redrust-concrete-wall-512px
+*/
+
+title="Demo map interior";
+
+playerStartPos=[3.5, 4.0]; // x, y
+
+size =[7, 7]; // number of cells on x, y
+
+// Cell format is: 
+// Top, Bottom, Left, Right, Ceiling, Floor
+data=
+[
+	0, 0, 0, 0, 3, 1,   0, 4, 0, 0, 6, 2,   3, 0, 4, 0, 3, 1,   0, 7, 7, 0, 3, 2,   5, 10, 7, 0, 6, 1,   5, 10, 6, 0, 6, 2,   5, 10, 6, 5, 3, 1,
+	0, 0, 0, 3, 3, 2,   0, 0, 0, 0, 6, 1,   0, 0, 0, 0, 6, 2,   0, 0, 0, 0, 3, 1,   0, 0, 0, 0, 6, 2,   0, 0, 0, 0, 3, 1,   0, 0, 0, 5, 3, 2,
+	0, 3, 0, 3, 3, 1,   0, 0, 0, 0, 6, 2,   8, 8, 8, 8, 3, 1,   0, 0, 0, 0, 3, 2,   0, 0, 0, 0, 6, 1,   0, 0, 0, 0, 6, 2,   0, 0, 0, 5, 3, 1,
+	0, 0, 6, 0, 3, 2,   0, 0, 0, 0, 6, 1,   0, 0, 0, 0, 6, 2,   0, 0, 0, 0, 3, 1,   0, 0, 0, 0, 6, 2,   3, 0, 3, 0, 3, 1,   3, 0, 0, 0, 3, 2,
+	0, 7, 5, 0, 3, 1,   0, 0, 0, 0, 6, 2,   9, 9, 9, 9, 3, 1,   0, 0, 0, 0, 3, 2,   0, 0, 0, 0, 6, 1,   0, 0, 3, 0, 6, 2,   0, 0, 0, 0, 3, 1,
+	0, 5, 0, 7, 3, 2,   0, 0, 0, 0, 6, 1,   0, 0, 0, 0, 6, 2,   0, 0, 0, 0, 3, 1,   0, 0, 0, 0, 6, 2,   3, 0, 0, 0, 3, 1,   3, 0, 0, 4, 3, 2,
+	0, 7, 6, 0, 3, 1,   0, 5, 0, 0, 6, 2,   0, 7, 0, 0, 3, 1,   3, 0, 3, 0, 3, 2,   3, 0, 0, 4, 6, 1,   10, 4, 0, 6, 6, 2,   10, 4, 0, 4, 3, 1
+];
+
+cellsInfoColor=
+[ /* CellInfoID   R    G    B */
+	 
+];
+cellsInfoTexture=
+[ /* CellInfoID   TextureID */
+	 1,           1,
+	 2,           2,
+	 3,           3,
+	 4,           4,
+	 5,           5,
+	 6,           6,
+	 7,           7,
+	 8,           8,
+	 9,           9,
+	 10,          10
+];
+
+textures=
+[ /* TextureID   FilePath */
+	 1,          "demoMapInterior_textures/floorTilesBlue_128x128.png",
+	 2,          "demoMapInterior_textures/floorTiles_128x128.png",
+	 3,          "demoMapInterior_textures/brick_128x128.png",
+	 4,          "demoMapInterior_textures/brick2_128x128.png",
+	 5,          "demoMapInterior_textures/cobble_wall.png",
+	 6,          "demoMapInterior_textures/cobble_ceiling.png",
+	 7,          "demoMapInterior_textures/rck_2.png",
+	 8,          "demoMapInterior_textures/tile14_128x128.png",
+	 9,          "demoMapInterior_textures/tile21_128x128.png",
+	 10,         "demoMapInterior_textures/bars.png"
+];
+
+playerHasLight             = 1;
+playerLightDiffuseStrength = 20.0;
+playerLightDiffusePower    = 3.0;
+playerLightDiffuseColor    = [255, 255, 255];
+
+hasAmbientLight      = 1;
+ambientLightStrength = 0.01;
+ambientLightColor    = [255, 255, 255];
+
+environmentIsTexture = 0;
+environmentColor     = [102, 127, 153];
+environmentTextureId = 0;

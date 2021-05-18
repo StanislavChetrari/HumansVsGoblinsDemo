@@ -1,0 +1,61 @@
+/*
+	
+*/
+
+title="map1";
+
+playerStartPos=[1.5, 1.5]; // x, y
+
+size =[5, 7]; // number of cells on x, y
+
+// Cell format is: 
+// Top, Bottom, Left, Right, Ceiling, Floor
+data=
+[
+	1, 2, 6, 6, 0, 0,   2, 2, 2, 2, 0, 0,   1, 1, 1, 1, 0, 0,   6, 6, 6, 6, 0, 0,   1, 1, 1, 1, 0, 0, 
+	2, 2, 2, 2, 4, 5,   0, 0, 0, 0, 4, 5,   0, 0, 0, 0, 4, 5,   0, 0, 0, 0, 4, 5,   1, 1, 1, 1, 4, 5, 
+	6, 6, 6, 6, 4, 5,   0, 0, 0, 0, 4, 5,   0, 0, 0, 0, 4, 5,   0, 0, 0, 0, 4, 5,   2, 2, 2, 2, 4, 5, 
+	1, 1, 1, 1, 4, 5,   0, 0, 0, 0, 0, 5,   0, 0, 0, 0, 2, 1,   0, 0, 0, 0, 4, 5,   1, 1, 1, 1, 4, 5, 
+	2, 2, 2, 2, 4, 5,   0, 0, 0, 0, 4, 5,   0, 0, 0, 0, 4, 5,   0, 0, 0, 0, 4, 5,   1, 1, 1, 1, 4, 5, 
+	6, 6, 6, 6, 4, 5,   0, 0, 0, 0, 4, 5,   0, 0, 0, 0, 0, 5,   0, 0, 0, 0, 4, 5,   1, 1, 1, 1, 4, 5, 
+	1, 1, 1, 1, 0, 0,   0, 3, 3, 3, 4, 5,   2, 2, 2, 2, 4, 5,   5, 5, 5, 5, 4, 5,   1, 1, 1, 1, 0, 0
+];
+
+cellsInfoColor=
+[ /* CellInfoID   R    G    B */
+	 1,           255, 0,   0,
+	 2,           0,   255, 0,
+	 6,           255, 0,   255
+];
+cellsInfoTexture=
+[ /* CellInfoID   TextureID */
+	 3,           1,
+	 4,           3,
+	 5,           2,
+	 7,           4
+];
+cellsInfoThatAreMirror=
+[  /* CellInfoID */
+	
+];
+
+textures=
+[ /* TextureID   FilePath */
+	 1,          "map1_textures/aerial_rocks_04_diff_1k.png",
+	 2,          "map1_textures/brick_floor_003_diffuse_1k.png",
+	 3,          "map1_textures/brick_wall_001_diffuse_1k.png",
+	 4,          "map1_textures/transparent_rexture_1.png"
+];
+
+playerHasLight             = 0;
+playerLightDiffuseStrength = 2.0;
+playerLightDiffusePower    = 3.0;
+playerLightDiffuseColor    = [255, 255, 255];
+
+hasAmbientLight      = 1;
+ambientLightStrength = 1.0;
+ambientLightColor    = [255, 255, 255];
+
+environmentIsTexture = 0;
+environmentColor     = [102, 127, 153];
+environmentTextureId = 0;
